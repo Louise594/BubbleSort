@@ -1,0 +1,30 @@
+using System;
+public class BubbleSort
+{
+    public static void Main(string[] args)
+    {
+        int total=10;
+        int[]numbers= new int [total];
+        for(int i=0; i<total; i++)
+        {
+        numbers[i]=Convert.ToInt32(Console.ReadLine());
+        }
+        //Bubble Sort
+        for (int i=0; i<total-1; i++)
+        {
+            for (int j=i+1; j<total-1; j++)
+            {
+                if(numbers[i] > numbers [j])
+                {
+                    int aux = numbers[i];
+                    numbers[i] = numbers[j];
+                    numbers[j] = aux;
+                }
+            }
+        }
+        foreach (int n in numbers)
+        {
+            Console.Write("{0} ",n);
+        }
+    }
+}
